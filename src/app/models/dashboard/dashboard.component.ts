@@ -23,4 +23,9 @@ console.log("clicked register")
         this.router.navigate(["dashboard/employee/list"])
       }
 
+      onClickLogout(){
+        localStorage.removeItem("accessToken")
+        this.router.navigate(["/login"])
+      }
+
 }

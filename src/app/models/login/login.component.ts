@@ -25,10 +25,10 @@ loginForm:FormGroup;
     console.log("login called")
 console.log(this.loginForm.value)
 
-this.httpService.login(this.loginForm.value).subscribe((res)=>{
+this.httpService.login(this.loginForm.value).subscribe((res:any)=>{
   console.log(res)
+  localStorage.setItem('accessToken',res.token)
   this.router.navigate(['dashboard'])
-  
 },(err)=>{
   console.log(err)
 })
