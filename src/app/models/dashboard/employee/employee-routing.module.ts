@@ -5,13 +5,13 @@ import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [{
-  path:"list",component:ListComponent,pathMatch:"full"
+  path:"list",component:ListComponent
   
 },{
   path:"",component:ListComponent,pathMatch:"full"
   
 },{
-  path:"register",component:RegisterComponent,pathMatch:"full"
+  path:"register",component:RegisterComponent
 }];
 
 @NgModule({

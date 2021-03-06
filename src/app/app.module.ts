@@ -23,7 +23,7 @@ import { DashboardComponent } from './models/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,DashboardComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,MatButtonModule,BrowserAnimationsModule,HttpClientModule,

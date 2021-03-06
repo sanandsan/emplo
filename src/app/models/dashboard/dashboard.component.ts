@@ -16,7 +16,11 @@ export class DashboardComponent implements OnInit {
 
   onClickRegister(){
 console.log("clicked register")
-    this.router.navigate(["dashboard/employee/list"])
+    this.router.navigate(["dashboard/employee/register"])
   }
+  employees(){
+    console.log("clicked register")
+        this.router.navigate(["dashboard/employee/list"])
+      }
 
 }

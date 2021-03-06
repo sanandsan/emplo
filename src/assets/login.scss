@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    background-color:rgb(8, 81, 92);
+    background-color:#fffffff7;
 width: 100%;
 height: 100%;
 align-items: center;
 }
 .login-card {
-    background-color: rgba(255, 255, 255, .15);  
+    background-color: rgb(26, 119, 230, .32);
     height: 350px;
     width: 300px; 
     display:flex;
@@ -29,7 +29,7 @@ align-items: center;
    }
 
    .login-card {
-    background-color: rgba(255, 255, 255, .15);  
+    background-color: rgba(58, 139, 245, 0.439);
     backdrop-filter: blur(5px);
    }
    .content{

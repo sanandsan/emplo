@@ -1,1 +1,34 @@
-<p>register works!</p>
+
+<div class="register">
+<form class="register-form" [formGroup]="registerForm" (ngSubmit)="register()" >
+    <div style="    display: flex;
+    align-items: center;
+    flex-direction: column;">
+        <mat-form-field style="width: 200px;" appearance="legacy">
+            <mat-label style="color:black">Name</mat-label>
+            <input formControlName="name" matInput placeholder="abc">
+          </mat-form-field>
+          <mat-form-field style="width: 200px;" appearance="legacy">
+            <mat-label style="color:black">Email</mat-label>
+            <input formControlName="email" matInput  type="text" placeholder="abc@email.com">
+          </mat-form-field>
+          <mat-form-field style="width: 200px;" appearance="legacy">
+            <mat-label style="color:black">Phone Number</mat-label>
+            <input formControlName="phone_number"  type="text"matInput placeholder="+91XXXXXXXXX">
+          </mat-form-field>
+        
+          <div style="display: flex;
+          flex-direction: column;">
+            <span>Choose file</span>
+            
+            <input class="file-input" type="file" formControlName="image">
+          </div>
+        
+        <!-- <img [src]="imageSrc" *ngIf="imageSrc" style="height: 300px; width:500px"> -->
+    </div>
+    <div>
+        <button mat-raised-button color="accent" type="submit">{{buttonName}}</button>
+    </div>
+     
+</form>
+</div>

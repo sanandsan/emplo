@@ -1,1 +1,27 @@
-<p>list works!</p>
+
+<div class="details-container">
+    <div class="heading" >
+        
+        <h1 style="    margin: auto;">Employees</h1>
+        <div class="paginator">
+            <h1 (click)="getAllEmployees(types.inc)" style="    margin: auto;"> >></h1>
+            <h1 (click)="getAllEmployees(types.dec)" style="    margin: auto;"> <<</h1>
+        </div>
+    </div>
+<div class="card-container" *ngIf="employees.length>=1">
+    <div class="card"  *ngFor= "let employee of employees">
+        <div class="details">
+        <img src="{{employee.image}}" alt="img" style="width:100%">
+        <h1>{{employee.name}}</h1>
+        <p class="title" >{{employee.phone}}</p>
+        <p>{{employee.email}}</p>
+        </div>
+        <div class="options">
+        <p><button (click)="onclickEdit(employee)">Edit</button></p>
+        <p><button (click)="onclickDelete(employee)">Delete</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="employees.length<=0"> empty   </div>
+</div>

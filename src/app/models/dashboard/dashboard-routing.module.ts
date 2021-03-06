@@ -1,16 +1,16 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard.component';
 
 
-const routes: Routes = [{
-  path:"employee",loadChildren:()=>import ("./../dashboard/employee/employee.module").then((m)=>m.EmployeeModule)
-},
+const routes: Routes = [
+
 {
-  path:"",redirectTo:"employee"
-},
-// loadChildren: () => import('./items/items.module').then(m => m.ItemsModule)
-];
-
+  path:"",component:DashboardComponent,children:[{
+  path:"employee",loadChildren:()=>import ('./../dashboard/employee/employee.module').then(m=>m.EmployeeModule)
+  }
+]
+}]
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

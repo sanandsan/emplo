@@ -8,10 +8,10 @@ const routes: Routes = [{
   path:"login",component:LoginComponent,
 },
 {
-  path:"",component:LoginComponent,
-  
+  path:"",redirectTo:"login",pathMatch:"full"
 
-},{ path:"dashboard",component:DashboardComponent}];
+},{ path:"dashboard",loadChildren:()=>import("./models/dashboard/dashboard.module").then(m=>m.DashboardModule)}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
